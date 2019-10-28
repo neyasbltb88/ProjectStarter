@@ -18,6 +18,7 @@ REM Запуск рабочих скриптов и запись того, чт�
 call %HOME%\README.md.cmd > "%PROJECT_NAME%\README.md"
 call %HOME%\project-web.code-workspace.cmd > "%PROJECT_NAME%\%PROJECT_NAME%.code-workspace"
 call %HOME%\package.json.cmd > "%PROJECT_NAME%\package.json"
+call %HOME%\webpack.config.js.cmd > "%PROJECT_NAME%\webpack.config.js"
 call %HOME%\.gitignore.cmd > "%PROJECT_NAME%\.gitignore"
 
 call %HOME%\index.html.cmd > "%PROJECT_NAME%\src\index.html"
