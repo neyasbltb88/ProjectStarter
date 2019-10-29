@@ -8,11 +8,8 @@ echo         ^<meta charset="UTF-8" /^>
 echo         ^<meta name="viewport" content="width=device-width, initial-scale=1.0" /^>
 echo         ^<meta http-equiv="X-UA-Compatible" content="ie=edge" /^>
 echo         ^<title^>%PROJECT_NAME%^</title^>
-echo         ^<link rel="stylesheet" href="./css/style.css"^>
 echo     ^</head^>
 echo     ^<body^>
 echo         ^<h1^>Welcome to %PROJECT_NAME% project!^</h1^>
-echo.
-echo         ^<script src="./js/index.js"^>^</script^>
 echo     ^</body^>
 echo ^</html^>

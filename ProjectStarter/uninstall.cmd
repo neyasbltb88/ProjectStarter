@@ -16,7 +16,9 @@ REM Эта часть должна выполняться только с пра
 set HOME=%SYSTEMDRIVE%%HOMEPATH%\ProjectStarter
 
 REM Чистка в реестре записи о пункте в контекстном меню и о деинсталяции из списка приложений
-REG DELETE "HKEY_CLASSES_ROOT\Directory\Background\shell\Развернуть Web проект" /f
+REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\ProjectStarter.web" /f
+REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\ProjectStarter.webpack" /f
+REG DELETE "HKEY_CLASSES_ROOT\Directory\Background\shell\ProjectStarter" /f
 REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\ProjectStarter" /f
 
 REM Удаление папки, куда была установка
