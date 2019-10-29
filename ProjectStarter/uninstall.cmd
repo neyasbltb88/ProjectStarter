@@ -1,6 +1,8 @@
 @echo off
 chcp 65001 > nul
 
+echo UNINSTALL
+
 REM Проверка на наличие прав Администратора
 WHOAMI /PRIV | find /i "SeRemoteShutdownPrivilege" > nul
 
