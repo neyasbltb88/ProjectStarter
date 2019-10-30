@@ -15,13 +15,13 @@ exit
 
 REM Эта часть должна выполняться только с правами Администратора
 :ADMIN
-set HOME=%SYSTEMDRIVE%%HOMEPATH%\ProjectStarter
+set HOME=%USERPROFILE%\ProjectStarter
 
 REM Чистка в реестре записи о пункте в контекстном меню и о деинсталяции из списка приложений
-REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\ProjectStarter.web" /f
-REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\ProjectStarter.webpack" /f
-REG DELETE "HKEY_CLASSES_ROOT\Directory\Background\shell\ProjectStarter" /f
-REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\ProjectStarter" /f
+REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\ProjectStarter" /f /reg:64
+REG DELETE "HKEY_CLASSES_ROOT\Directory\Background\shell\ProjectStarter" /f /reg:64
+REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\ProjectStarter.web" /f /reg:64
+REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\ProjectStarter.webpack" /f /reg:64
 
 REM Удаление папки, куда была установка
 if exist "%HOME%\" RMDIR "%HOME%\" /S /Q
